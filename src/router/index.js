@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import home from '../views/home.vue'
 import about  from "../views/about.vue";
 import contact from '../views/contact.vue'
+import inscription from '../views/inscription.vue'
+import services from '../views/services.vue'
 import connexion from '../views/connexion.vue'
-
 
 const routes = [
   {
@@ -20,6 +21,16 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: contact
+  },
+  {
+    path: '/services',
+    name: 'services',
+    component: services
+  },
+  {
+    path: '/inscription',
+    name: 'inscription',
+    component: inscription
   },
   {
     path: '/connexion',

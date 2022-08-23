@@ -1,17 +1,22 @@
 <template>
+    <NavbarComponent class="nave"/>
     <div>
-        <h1>a propos de moi</h1>
+       
     </div>
+    
 </template>
 <script>
+import NavbarComponent from "@/components/Navbar.vue"
 export default {
-    name:'about'
+    name:'about',
+     components:{
+        NavbarComponent,
+    }
 }
 </script>
-<style>
-    h1{
-      margin-top: 100px;
-      font-size: 60px;
-      color: rgb(27, 125, 210);
+<style scoped>
+    .nave{
+        background-color: aliceblue;
     }
+    
 </style>

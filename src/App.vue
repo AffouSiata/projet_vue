@@ -1,8 +1,6 @@
 <template>
   <div>  
-    <header>
-      <Navbar/>  
-    </header>
+  
     <router-view/>
   </div> 
   
@@ -10,13 +8,11 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue"
+
 
 export default {
   name:'app',
-  components:{
-   Navbar
-  }
+  
 }
 </script>
 
@@ -31,9 +27,12 @@ export default {
     list-style-type: none;
     box-sizing: border-box;
 }
-body{
-  background-image: url('./assets/img2.jpg');
-}
+/* body{
+ 
+  background-image: url('./assets/img4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -43,7 +42,7 @@ body{
 }
 header{
   width: 100vw;
-  background-color: rgb(148, 144, 144);
+  /* background-color: rgb(148, 144, 144); */
  
 }
 

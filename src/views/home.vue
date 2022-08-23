@@ -1,13 +1,20 @@
 <template>
       <div>
-          <h1>Bienvenue sur  ma plateforme</h1>
-      </div>
+          <HeaderComponent/>
+          <ProposComponent/>
+          
+      </div> 
 </template>
 
 <script>
-
+import HeaderComponent from '@/components/Header.vue'
+import ProposComponent from '@/components/Propos.vue'
 export default {
   name: 'home',
+  components:{
+   HeaderComponent,
+   ProposComponent
+  }
 
   
 }
@@ -15,8 +22,9 @@ export default {
 <style scoped>
 
     h1{
-      margin-top: 100px;
+      margin-top: 90px;
       font-size: 60px;
       color: rgb(27, 125, 210);
     }
+   
 </style>
