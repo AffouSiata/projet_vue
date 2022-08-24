@@ -40,11 +40,6 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-header{
-  width: 100vw;
-  /* background-color: rgb(148, 144, 144); */
- 
-}
 
 
 </style>

@@ -2,6 +2,9 @@
       <div>
           <HeaderComponent/>
           <ProposComponent/>
+          <ServoceComponent/>
+          <ContactComponent/>
+          <FooterComponnent/>
           
       </div> 
 </template>
@@ -9,11 +12,18 @@
 <script>
 import HeaderComponent from '@/components/Header.vue'
 import ProposComponent from '@/components/Propos.vue'
+import ServoceComponent from '@/components/Servoce.vue'
+import ContactComponent from '@/components/Contact.vue'
+import FooterComponnent from '@/components/Footer.vue'
+
 export default {
   name: 'home',
   components:{
    HeaderComponent,
-   ProposComponent
+   ProposComponent,
+   ServoceComponent,
+   ContactComponent,
+   FooterComponnent
   }
 
   
@@ -21,10 +31,6 @@ export default {
 </script>
 <style scoped>
 
-    h1{
-      margin-top: 90px;
-      font-size: 60px;
-      color: rgb(27, 125, 210);
-    }
+
    
 </style>

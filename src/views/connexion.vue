@@ -13,7 +13,7 @@
              <div class="formes">
                 <input type="password" placeholder="entrer le mot de passe">
             </div>
-             <div class="formes btn">
+             <div class="btn">
                 <input type="submit">
             </div>
 
@@ -30,9 +30,9 @@ export default {
 }
 </script>
 <style scoped>
- .nave{
+    /* .nave{
        background-color: aliceblue;
-    }
+    } */
     .inscrire{
         height: 900px;
         margin-top: 120px;
@@ -65,22 +65,26 @@ export default {
         /* border: 2px solid red; */
         background-color: aliceblue;
     } 
-    .btn input{
+   .btn {
         margin-top: 30px;
         width: 429px;
         font-size: 30px;
         border-radius: 15px;
         background-color: #3DA3D4;
+    }
+    .btn input{
+        background: none;
+        font-size: 34px;
         font-weight: bold;
     }
-    .btn input:hover{
-        margin-top: 30px;
-        width: 429px;
-        font-size: 30px;
-        border-radius: 15px;
+     .btn input:hover{
+        color: #3DA3D4;
+     }
+    .btn:hover{
+        
         background-color:white;
         font-weight: bold;
-        color: #3DA3D4;
+      
         border: 2px solid #3DA3D4;
     }
 </style>

@@ -3,7 +3,7 @@
         <img alt="Vue" src="../assets/logo1.png">
         <nav>
             <div class="menu-item"><a href="/">Home</a></div>
-            <div class="menu-item"><a href="/about">About</a></div>
+            <div class="menu-item"><a href="#about" >About</a></div>
             <div class="menu-item"><a href="/contact">Services</a></div>  
             <div class="menu-item"><a href="/contact">Contact</a></div>  
         </nav>
@@ -30,15 +30,10 @@ export default {
         top:0;
         /* background-color: #FFF; */
         box-shadow: rgb(44, 44, 43);
-
-
-      
-
-       
-    
+        font-family: 'Didot', serif;
     }
     .partie1-active{
-        background-color: #FFF;
+        background-color: #b2e2f8;
         transition: 0.5s ease-in;
     }
     .partie1 img{
