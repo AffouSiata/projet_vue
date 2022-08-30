@@ -1,11 +1,11 @@
 <template>
     <div class="partie1">
-        <img alt="Vue" src="../assets/logo1.png">
+        <img alt="Vue" src="../assets/logo2.png">
         <nav>
             <div class="menu-item"><a href="/">Home</a></div>
             <div class="menu-item"><a href="#about" >About</a></div>
             <div class="menu-item"><a href="/contact">Services</a></div>  
-            <div class="menu-item"><a href="/contact">Contact</a></div>  
+            <div class="menu-item"><a href="#contact">Contact</a></div>  
         </nav>
         <div class="menu-item login"><a href="/connexion"><i class="fa fa-sign-in"></i>Connexion</a></div> 
     </div>

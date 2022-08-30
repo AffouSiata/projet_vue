@@ -54,6 +54,7 @@ export default {
     .about h2{
        font-size:50px ;  
        margin: 10px;
+       color: black;
     }
     .about p{
        text-align: justify; 

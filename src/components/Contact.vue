@@ -1,6 +1,6 @@
 <template>
    
-        <div class="contact">
+        <div class="contact" id="contact">
             <div class="contact1">
                 <h4>Contact</h4>
                     <form action="">
@@ -109,6 +109,7 @@ export default {
         background: none;
         font-size: 34px;
         font-weight: bold;
+        border: none;
     }
     .btn input:hover{
         color: #3DA3D4;

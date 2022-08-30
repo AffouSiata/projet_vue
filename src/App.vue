@@ -18,28 +18,19 @@ export default {
 
 
 <style>
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    text-transform: capitalize;
-    border: none;
-    list-style-type: none;
-    box-sizing: border-box;
-}
-/* body{
+
+
+    /* .global{
  
-  background-image: url('./assets/img4.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+   position: absolute; 
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 11115;
+   background-color: black;
+   opacity: 0.6;
+   display: none;
+
 } */
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-
 </style>

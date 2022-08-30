@@ -1,4 +1,5 @@
 <template>
+      <!-- <div ></div> -->
       <div>
           <HeaderComponent/>
           <ProposComponent/>
@@ -30,7 +31,5 @@ export default {
 }
 </script>
 <style scoped>
-
-
    
 </style>
