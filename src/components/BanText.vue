@@ -5,7 +5,7 @@
         <p>
             Nous vous aiderons à vous sentir mieux et à profiter de chaque jour de votre vie. peut être la santé à la croissance la plus rapide.
         </p>
-        <div class="menu-item"><a href="/">View More</a></div> 
+        <div class="menu-item"><router-link to="/">View More</router-link></div> 
     </div>
 </template>
 <script>

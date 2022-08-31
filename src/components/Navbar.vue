@@ -2,12 +2,12 @@
     <div class="partie1">
         <img alt="Vue" src="../assets/logo2.png">
         <nav>
-            <div class="menu-item"><a href="/">Home</a></div>
-            <div class="menu-item"><a href="#about" >About</a></div>
-            <div class="menu-item"><a href="/contact">Services</a></div>  
-            <div class="menu-item"><a href="#contact">Contact</a></div>  
+            <div class="menu-item"><router-link to="/" class="lien" >Home</router-link></div>
+            <div class="menu-item"><router-link to="#about" class="lien" >About</router-link></div>
+            <!-- <div class="menu-item"><router-link to="" class="lien" >Services</router-link></div>   -->
+            <div class="menu-item"><router-link to="#contact" class="lien" >Contact</router-link></div>  
         </nav>
-        <div class="menu-item login"><a href="/connexion"><i class="fa fa-sign-in"></i>Connexion</a></div> 
+        <div class="menu-item login"><router-link to="/connexion"><i class="fa fa-sign-in"></i>Connexion</router-link></div> 
     </div>
 </template>
 <script>
@@ -72,6 +72,7 @@ export default {
         border-radius: 10px;
        
     }
+  
     .login a{
         font-size: 20px;
         color: black;
@@ -80,7 +81,7 @@ export default {
      .login a i{
         margin-right: 10px;
      }
-    .login a:hover{
+    .login a :hover{
         color: #3DA3D4;
      }
     

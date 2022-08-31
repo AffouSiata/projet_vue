@@ -3,6 +3,7 @@ import home from '../views/home.vue'
 import inscription from '../views/inscription.vue'
 import connexion from '../views/connexion.vue'
 import consulte from '../views/consulte.vue'
+import recu from '../views/recu.vue'
 
 const routes = [
   {
@@ -24,8 +25,12 @@ const routes = [
     path: '/consulte',
     name: 'consulte',
     component: consulte
+  },
+  {
+    path: '/recu',
+    name: 'recu',
+    component: recu
   }
-  
 ]
 
 const router = createRouter({

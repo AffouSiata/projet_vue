@@ -34,11 +34,11 @@ export default {
 </script>
 <style>
     .contact{
-        margin-top: 50px;
+        margin-top: 10px;
         background:  rgba(0, 0, 0, 0.7) url('../assets/img4.jpg') no-repeat center;
         background-size: cover;
         background-attachment: scroll;
-        height: 100vh;
+        height: 60vh;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -54,8 +54,8 @@ export default {
         font-size: 60px;
     }
     .contact1{
-        margin-top:  140px;
-        height: 850px;
+        margin-top: 100px;
+        height: 400px;
         border: 2px solid #3DA3D4;
         width: 660px;
         margin-right: 10px;
@@ -66,8 +66,8 @@ export default {
       
     }
     .contact2{
-        margin-top:  140px;
-        height:860px;
+        margin-top: 100px;
+        height:460px;
         width: 660px;  
     }
     form{
@@ -122,6 +122,6 @@ export default {
    
     .contact2 iframe{
         width: 670px;
-        height: 850px;
+        height: 450px;
     }
 </style>

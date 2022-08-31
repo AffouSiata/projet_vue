@@ -8,24 +8,24 @@
             <span>Connectez-vous avec nous sur les réseaux sociaux:</span>
             </div>
             <div>
-            <a href="" class="me-4 text-reset">
+            <router-link to="" class="me-4 text-reset">
                 <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
+            </router-link>
+            <router-link to="" class="me-4 text-reset">
                 <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
+            </router-link>
+            <router-link to="" class="me-4 text-reset">
                 <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
+            </router-link>
+            <router-link to="" class="me-4 text-reset">
                 <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
+            </router-link>
+            <router-link to=""  class="me-4 text-reset">
                 <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
+            </router-link>
+            <router-link to="" href="" class="me-4 text-reset">
                 <i class="fab fa-github"></i>
-            </a>
+            </router-link>
             </div>
         </section>
         <section class="">
@@ -50,16 +50,16 @@
                             Products
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">HTML</a>
+                            <router-link to="" class="text-reset">HTML</router-link>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">CSS</a>
+                            <router-link to="#!" class="text-reset">CSS</router-link>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Vue</a>
+                            <router-link to="#!" class="text-reset">Vue</router-link>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">JS</a>
+                            <router-link to="#!" class="text-reset">JS</router-link>
                         </p>
                     </div>
            
@@ -69,16 +69,16 @@
                             Useful links
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Accueil</a>
+                            <router-link  to="#!" class="text-reset">Accueil</router-link>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">A propos</a>
+                            <router-link  to="#!" class="text-reset">A propos</router-link>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Orders</a>
+                            <router-link  to="#!" class="text-reset">Orders</router-link>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Conatct</a>
+                            <router-link  to="#!" class="text-reset">Conatct</router-link>
                         </p>
                     </div>
             
@@ -99,7 +99,7 @@
         </section>
         <div class="text-center p-4" style="background-color:#FFF;">
             © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/" style="color: #3DA3D4 !important; ;">healt@gmail.com</a>
+            <router-link to="" class="text-reset fw-bold" href="https://mdbootstrap.com/" style="color: #3DA3D4 !important; ">healt@gmail.com</router-link>
         </div>
     </footer>
 

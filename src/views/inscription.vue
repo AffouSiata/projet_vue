@@ -42,9 +42,8 @@ import useVuelidate from '@vuelidate/core';
 import {mdp_plex,champvaleur,champemail,longminNom,longmaxNom,longmaxprenom,longminprenom} from "../nosfonctions/regle";
  
 
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import app from '../firebase';
-const auth = getAuth(app);
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from '../firebase';
 
 export default {
     name: "inscription",
@@ -73,10 +72,6 @@ export default {
     },
     methods: {
         async register() {
-            console.log("je clique",conn);
-
-
-
             this.v$.$touch();
             if (this.v$.$errors.length === 0) {
                 // console.log("c'est bon tu peux pas passer a la suite");
