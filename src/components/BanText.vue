@@ -53,7 +53,7 @@ export default {
         margin:28px auto 15px 0;
         font-weight: 400;
         font-size: 17px;
-        /* width: 100%; */
+   
         text-align: justify;
         color: #aaa;
         font-weight: bold;
@@ -62,7 +62,6 @@ export default {
     .text .menu-item{
         background-color: #3DA3D4;
         width: 180px;
-        /* margin-left: 250px; */
         margin-top: 50px;
         padding: 10px;
         border-radius: 5px;

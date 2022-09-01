@@ -30,7 +30,7 @@ export default {
     .block1{
         display: flex; 
         width: 100%;
-        height: 77vh;
+        height: 83vh;
         background-color: aliceblue;
        justify-content: center;
        margin-top: 50px;
@@ -42,7 +42,6 @@ export default {
         margin-right: 30px;
         background-color: aliceblue;
         text-align: left;
-        /* border: 1px solid black; */
     
     }
     .about h1{
@@ -66,8 +65,8 @@ export default {
         background-color: #3DA3D4;
         width: 280px;
         margin-left: -107px;
-        margin-top: 50px;
-        padding: 20px;
+        margin-top: 80px;
+        padding: 5px;
     }
     .about .menu-item:hover{
           background-color: white;

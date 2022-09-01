@@ -13,7 +13,7 @@
                         
                         </div>
                         <div class="formes">
-                            <textarea name="" id="" cols="60" rows="7" placeholder="votre message "></textarea>
+                            <textarea name="" id="" cols="40" rows="7" placeholder="votre message "></textarea>
                         </div>
                         <div class="btn">
                             <input type="submit">
@@ -34,11 +34,11 @@ export default {
 </script>
 <style>
     .contact{
-        margin-top: 10px;
+        margin-top: 50px;
         background:  rgba(0, 0, 0, 0.7) url('../assets/img4.jpg') no-repeat center;
         background-size: cover;
         background-attachment: scroll;
-        height: 60vh;
+        height: 65vh;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -50,12 +50,11 @@ export default {
     h4{
         text-align: center;
         color: white;
-        padding: 20px;
-        font-size: 60px;
+       
     }
     .contact1{
-        margin-top: 100px;
-        height: 400px;
+        margin-top: 10px;
+        height: 600px;
         border: 2px solid #3DA3D4;
         width: 660px;
         margin-right: 10px;
@@ -66,8 +65,8 @@ export default {
       
     }
     .contact2{
-        margin-top: 100px;
-        height:460px;
+        margin-top: 10px;
+        height: 600px;
         width: 660px;  
     }
     form{
@@ -85,29 +84,28 @@ export default {
     }
     .formes input{
         margin-top: 30px;
-        width: 629px;
-        padding: 20px; 
+        width: 429px;
+        padding: 10px; 
         font-size: 20px;
         border-radius: 15px;
         background-color: aliceblue;
     } 
     textarea{
         font-size: 20px;
-        padding: 20px; 
-        margin-top: 30px;
+        margin-top: 30px; 
         border-radius: 15px;
         background-color: aliceblue;
     }
     .btn {
-        margin-top: 30px;
-        width: 629px;
-        font-size: 30px;
+        
+        width: 429px;
+        font-size: 20px;
         border-radius: 15px;
         background-color: #3DA3D4;
     }
     .btn input{
         background: none;
-        font-size: 34px;
+        font-size: 30px;
         font-weight: bold;
         border: none;
     }
@@ -122,6 +120,6 @@ export default {
    
     .contact2 iframe{
         width: 670px;
-        height: 450px;
+        height: 600px;
     }
 </style>

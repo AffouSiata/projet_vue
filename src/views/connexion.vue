@@ -1,7 +1,6 @@
 <template>
       <NavbarComponent class="nave"/>
     <div class="inscrire">
-        <!-- <h1>connectez vous svp</h1> -->
         <form action="">
             <h2>Connexion</h2>
              <p>Veuillez créer un <a href="/inscription">compte SVP</a></p> 
@@ -15,7 +14,6 @@
                 <input type="password" placeholder="entrer le mot de passe" v-model="password">
             </div>
              <div class="btn">
-                <!-- <input type="submit" @submit="login"> -->
                 <button @click.prevent="loginne">Connection</button>
             </div>
 
@@ -59,12 +57,6 @@ export default {
                     
                     
             }
-
-            let aze ={
-                email:this.email,
-                password:this.password
-            }
-            console.log("qssfdfd",aze);
             signInWithEmailAndPassword(auth, this.email, this.password)
             .then((user)=>{
                 console.log(user);
@@ -126,7 +118,6 @@ export default {
         padding: 20px; 
         font-size: 20px;
         border-radius: 15px;
-        /* border: 2px solid red; */
         background-color: aliceblue;
         margin-left: 20px;
     } 

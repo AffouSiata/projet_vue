@@ -112,7 +112,6 @@ export default {
 </script>
 <style>
 footer{
-    /* margin-top: 30px; */
     font-family: 'Didot', serif !important;
     color: black!important;
 }

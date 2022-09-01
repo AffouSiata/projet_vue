@@ -18,6 +18,7 @@ export default {
         width: 100%;
         height: 300px;
         background-color: aliceblue;
+        margin-bottom: 20px;
     }
     .text{
         display: flex;

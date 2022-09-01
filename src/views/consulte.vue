@@ -14,15 +14,7 @@
                 <div class="header">
                     <legend>Bienvenue</legend>
                 </div>
-
-               
-
-
-
-
-
                 <div class="content">
-                <!-- <form action=""> -->
                     <div class="form-group">
                         <label for="" class="special">Spécialité</label>
                         <select name="" id="" v-model="specialite">
@@ -39,15 +31,15 @@
                             <option value="Psychologie">Psychologie</option>
                             <option value="Autres">Autres</option>
                         </select>
-                        <!-- <small v-if="v$.specialiste.$error">{{v$.specialiste.$errors[0].$message}}</small><br> -->
-                         
+                        <small v-if="v$.specialite.$error" class="erreur">{{v$.specialite.$errors[0].$message}}</small><br>
+                          
                     </div>
                    
                     <legend>Votre Question :</legend>
                     <div class="form-group">
                         <label for="">La Question</label>
                         <textarea v-model="description"   placeholder="Tapez ici votre question. Pensez à nous fournir le maximum d'informations détaillées pour que notre réponse soit la plus pertinente possible."></textarea>
-                        <!-- <small v-if="v$.description.$error">{{v$.description.$errors[0].$message}}</small><br> -->
+                        <small v-if="v$.description.$error" class="erreur">{{v$.description.$errors[0].$message}}</small><br>
                     </div>
                          <legend>Informations Patient:</legend>
                     <fieldset>
@@ -58,32 +50,42 @@
                                 <option value="Femme">Femme</option>
                                 <option value="Homme">Homme</option>
                             </select>
-                            <!-- <small v-if="v$.genre.$error">{{v$.genre.$errors[0].$message}}</small><br> -->
+                            <small v-if="v$.genre.$error" class="erreur">{{v$.genre.$errors[0].$message}}</small><br>
                              <div class="blocke">
+                               <div class="poids">
                                 <div class="b">
                                     <div class="c">poids</div>
                                     <div class="d">
                                         <input type="text" placeholder="Entrer votre poids" v-model="poids">
-                                        <!-- <small v-if="v$.poids.$error">{{v$.poids.$errors[0].$message}}</small><br> -->
+                                       
                                     </div>
                                     <div class="e">kg</div>
                                 </div>
-                                 <div class="b">
+                                
+                                    <small v-if="v$.poids.$error">{{v$.poids.$errors[0].$message}}</small><br>
+                               </div>
+                                
+                                <div class="taille">
+                                    <div class="b">
                                     <div class="c">Taille</div>
                                     <div class="d">
-                                        <input type="text" placeholder="Entrer votre Taille" v-model="taille">
-                                        <!-- <small v-if="v$.taille.$error">{{v$.taille.$errors[0].$message}}</small><br> -->
+                                        <input type="text" placeholder="Entrer votre Taille" v-model="taille"> 
                                     </div>
                                     <div class="e">Cm</div>
                                 </div>
-                                 <div class="b">
+                                <small v-if="v$.taille.$error">{{v$.taille.$errors[0].$message}}</small><br>
+                                </div>
+                                 <div class="age">
+                                    <div class="b">
                                     <div class="c">Age</div>
                                     <div class="d">
                                         <input type="text" placeholder="Entrer votre Age" v-model="age">
-                                        <!-- <small v-if="v$.age.$error">{{v$.age.$errors[0].$message}}</small><br> -->
+                                      
                                     </div>
                                     <div class="e">Ans</div>
                                 </div>
+                                <small v-if="v$.age.$error">{{v$.age.$errors[0].$message}}</small><br>
+                                 </div>
                             </div>
                             <label for="" class="pays">Pays</label>
                             <select v-model="pays" class="pays">
@@ -111,7 +113,7 @@
                                 <option value="Rwand">Rwanda</option>
                                 <!-- <option :value="c.iso" :key="c.iso" v-for="c in countryList ">{{c.country}}</option> -->
                             </select>
-                            <!-- <small v-if="v$.pays.$error">{{v$.pays.$errors[0].$message}}</small><br> -->
+                            <small v-if="v$.pays.$error" class="erreur">{{v$.pays.$errors[0].$message}}</small><br>
                         </div>
                     </fieldset>
 
@@ -120,7 +122,7 @@
                         <label for="">Les traitements</label>
                         <textarea v-model="description1" class="tera" placeholder="Tapez ici vos Traitements "></textarea>
                         <p>Indiquez à nos docteurs vos traitements si vous en avez.</p>
-                        <!-- <small v-if="v$.description1.$error">{{v$.description1.$errors[0].$message}}</small><br> -->
+                        <small v-if="v$.description1.$error" class="erreur">{{v$.description1.$errors[0].$message}}</small><br>
                     </div>
 
 
@@ -129,7 +131,7 @@
                         <label for="" class="titre">Les Antécédents</label>
                         <textarea v-model="description2" class="tera" placeholder="Tapez ici vos Antécédents "></textarea>
                         <p>Indiquez à nos docteurs vos Antécédents Médicaux si vous en avez.</p>
-                        <!-- <small v-if="v$.description2.$error">{{v$.description2.$errors[0].$message}}</small><br> -->
+                        <small v-if="v$.description2.$error" class="erreur">{{v$.description2.$errors[0].$message}}</small><br>
                     </div>
                     <div class="boutton">
                         <!-- <input type="submit" > -->
@@ -163,8 +165,8 @@
 // }
 // convertirDate()
 
-// import useVuelidate from '@vuelidate/core';
-// import {mdp_plex,champvaleur,champemail,longminNom,longmaxNom,longmaxprenom,longminprenom} from "../nosfonctions/regle";
+import useVuelidate from '@vuelidate/core';
+import {nonvide} from "../nosfonctions/cons";
 
 import {db} from '../firebase' 
 import {addDoc, collection} from "firebase/firestore"
@@ -190,16 +192,18 @@ export default {
 
 
 
-    // validations: {
-    //     nom: { champvaleur, longmin: longminNom(4), longmax: longmaxNom(10)
-    //     },
-    //     prenom: { champvaleur, longPmin: longminprenom(6), longPmax: longmaxprenom(20)
-    //     },
-    //     email: { champvaleur, champemail
-    //     },
-    //     password: { champvaleur, mdp_plex
-    //     }
-    // },
+    validations: {
+        specialite:{nonvide},
+        description:{nonvide},
+        genre:{nonvide},
+        poids:{nonvide},
+        taille:{nonvide},
+        age:{nonvide},
+        pays:{nonvide},
+        description1:{nonvide},
+        description2:{nonvide}
+    },
+
     // mounted: function() {
     //     var v = this;
     //     v.$http.get(`http://localhost:4600/countries`)
@@ -214,11 +218,12 @@ export default {
 
     methods:{
        consulte(){ 
+        // this.v$.$validate()
 
-            // this.v$.$touch();
-            //     if (this.v$.$errors.length === 0) {
-            //     // console.log("c'est bon tu peux pas passer a la suite");
-            // }
+            this.v$.$touch();
+                if (this.v$.$errors.length === 0) {
+                // console.log("c'est bon tu peux pas passer a la suite");
+            }
             let cons ={
                 specialite:this.specialite,
                 description:this.description,
@@ -246,12 +251,13 @@ export default {
 
     }
 }
+
 </script>
 <style scoped>
    .consulte{
        display: flex;
        width: 100%;
-       height: 120vh;
+       height: 129vh;
        opacity: 0.8;
    }
    .consulte1{
@@ -289,7 +295,7 @@ export default {
         width: 97%;
         margin: 30px;
         background-color: white;
-        height: 1050px;
+        height: 1300px;
         border-radius:10px ;
     }
     .form-group{
@@ -319,7 +325,8 @@ export default {
     }
     .content{
         width: 100%;
-        padding: 15px
+        padding: 15px;
+
     }
     label{
         display: inline-block;
@@ -426,7 +433,7 @@ export default {
     }
     .boutton{
        width: 100%;
-       margin-top: 60px;
+       /* margin-top: 60px; */
     }
     .boutton button{
          width: 900px;
@@ -438,5 +445,19 @@ export default {
          border: none;
          color: white;
         border-radius: 7px;
+    }
+    .poids .taille .age{
+        display: flex;
+        flex-direction: column;
+    }
+    .erreur{
+       display: flex;
+       justify-content: center;
+    }
+    small{
+        display: inline-block;
+        color: red;
+        font-weight: bold;
+        
     }
 </style>

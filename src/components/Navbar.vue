@@ -4,12 +4,12 @@
         <nav>
             <div class="menu-item"><router-link to="/" class="lien" >Home</router-link></div>
             <div class="menu-item"><router-link to="#about" class="lien" >About</router-link></div>
-            <!-- <div class="menu-item"><router-link to="" class="lien" >Services</router-link></div>   -->
             <div class="menu-item"><router-link to="#contact" class="lien" >Contact</router-link></div>  
         </nav>
-        <div class="menu-item login"><router-link to="/connexion"><i class="fa fa-sign-in"></i>Connexion</router-link></div> 
+        <div class="menu-item consul"><router-link to="/connexion">Consultation Medicale en ligne</router-link></div> 
     </div>
 </template>
+<!-- <i class="fa fa-sign-in"></i> -->
 <script>
 import "@/assets/main.js"
 export default {
@@ -28,7 +28,6 @@ export default {
         margin: 0px auto;
         padding: 1rem 0;
         top:0;
-        /* background-color: #FFF; */
         box-shadow: rgb(44, 44, 43);
         font-family: 'Didot', serif;
     }
@@ -72,18 +71,24 @@ export default {
         border-radius: 10px;
        
     }
-  
-    .login a{
-        font-size: 20px;
-        color: black;
+    .consul{
+        background-color: #46b4e7;
+        padding: 10px;
+        border-radius: 10px;
+       
+    }.consul:hover{
+        border: 2px solid #46b4e7;
+        background-color: #fff;
+    }
+    .consul a{
+        color: #fff;
         font-weight: bold;
     }
-     .login a i{
-        margin-right: 10px;
-     }
-    .login a :hover{
+    .consul a:hover{
         color: #3DA3D4;
-     }
+    }
+  
+   
     
 
     

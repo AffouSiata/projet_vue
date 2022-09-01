@@ -1,12 +1,10 @@
 <template>
       <NavbarComponent class="nave"/>
     <div class="inscrire">
-        <!-- <h1>connectez vous svp</h1> -->
         
         <form action="">
             <h2>Inscrire Toi</h2>
             <span class="error"></span>
-            <!-- <p>Veuillez créer un <a href="">compte SVP</a></p> -->
             <div class="forme">
                <div class="forme1">
                     <input type="text" placeholder="Entrer le nom" v-model="nom">
@@ -28,9 +26,8 @@
             </div>
              <div class="btn">
                  <button @click.prevent="register">signup</button>
-                <!-- <input type="submit" @submit="register"> -->
+              
             </div>
-            <!-- <span>or go back to <router-link to="/connexion">login</router-link>.</span> -->
 
         </form>
     </div>
@@ -39,7 +36,7 @@
 import  NavbarComponent from "@/components/Navbar.vue";  
 
 import useVuelidate from '@vuelidate/core';
-import {mdp_plex,champvaleur,champemail,longminNom,longmaxNom,longmaxprenom,longminprenom} from "../nosfonctions/regle";
+import {champvaleur,champemail,longminNom,longmaxNom,longmaxprenom,longminprenom} from "../nosfonctions/regle";
  
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -67,7 +64,7 @@ export default {
         },
         email: { champvaleur, champemail
         },
-        password: { champvaleur, mdp_plex
+        password: { champvaleur
         }
     },
     methods: {
@@ -83,22 +80,23 @@ export default {
                     showerror("l'email existe déja");
                     return false;
                 }
-                // if(){
-                // showerror("le mot de passe existe déja")
-                // return false;
-                // }
-                // if(errorMe.code=="auth/invalid-email"){
-                // showerror("l'email est invalid")
-                // return false;
-                // }
-                // if(errorMe.code=="auth/invalid-email" || errorMe.code=="auth/internal-error"){
-                // showerror("les champs ne doivent pas etre vide")
-                // return false;
-                // }
-                // if(errorMe.code=="auth/weak-password"){
-                // showerror("le mot passe est trés court")
-                // return false;
-                // }
+                if (errorMe.code == "auth/invalid-email") {
+                    showerror("l'email est invalid");
+                    return false;
+                }
+                if (errorMe.code == "auth/weak-password") {
+                    showerror("Le mot de passe doit comporter au moins 6 caractères");
+                    return false;
+                }
+                if (errorMe.code == "auth/missing-email") {
+                    showerror("l'email ne doit pas etre vide");
+                    return false;
+                }
+                
+                
+               
+                
+            
             }
             createUserWithEmailAndPassword(auth, this.email.trim(), this.password)
                 .then((user) => {
@@ -120,7 +118,7 @@ export default {
     }
     .inscrire{
       
-        margin-top: 100px;
+        margin-top: 60px;
         background: rgba(175, 172, 172, 0.7) url('../assets/bg.jpg') no-repeat center;
         background-size: cover;
         background-attachment: scroll;
@@ -137,7 +135,7 @@ export default {
     form{
         border: 2px solid #3DA3D4;
         background-color:white;
-        margin: 200px auto;
+        margin: 100px auto;
         width: 700px;
         height: 700px;
         border-radius: 10px;
