@@ -7,7 +7,7 @@
                 <p class="mise">25/08/2022</p>
                 <div class="con1">
                     <a href=""> Mon Profil</a>
-                    <a href=""> Logout</a>
+                   <span @click="deconnexion">Se déconnecter</span>
                 </div>
             </div>
             <div class="recu">
@@ -58,14 +58,18 @@
 export default {
     name:'recu',
    
-
-
-  
-
-
     methods:{
-       
-
+        deconnexion(){
+            localStorage.clear();
+            this.$router.replace('/')
+        }
+    },
+    created(){
+        const util=  localStorage.getItem('utilisateur')
+        console.log("oooooooo",util);
+        if(util == null){
+            this.$router.push('/connexion')
+        }
     }
 }
 </script>
@@ -149,5 +153,11 @@ export default {
     .lien1 a,.lien2 a{
         color: white;
         
+    }
+    span{
+        /* margin-right: 15px; */
+        color: rgb(224, 224, 224);
+        font-weight: bold;
+        font-size: 20px;
     }
 </style>

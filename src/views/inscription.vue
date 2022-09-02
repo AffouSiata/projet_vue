@@ -37,6 +37,7 @@ import  NavbarComponent from "@/components/Navbar.vue";
 
 import useVuelidate from '@vuelidate/core';
 import {champvaleur,champemail,longminNom,longmaxNom,longmaxprenom,longminprenom} from "../nosfonctions/regle";
+// import {helpers,required,email,minLength,maxLength} from "@vuelidate/validators"
  
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -70,46 +71,51 @@ export default {
     methods: {
         async register() {
             this.v$.$touch();
-            if (this.v$.$errors.length === 0) {
+            if (this.v$.$errors.length == 0) {
                 // console.log("c'est bon tu peux pas passer a la suite");
-            }
-            /* backend */
-            function showerror(errorMe) {
-                document.querySelector(".error").innerHTML = errorMe;
-                if (errorMe.code == "auth/email-already-in-use") {
-                    showerror("l'email existe déja");
-                    return false;
+
+                function showerror(errorMe) {
+                    document.querySelector(".error").innerHTML = errorMe;
+                    if (errorMe.code == "auth/email-already-in-use") {
+                        showerror("l'email existe déja");
+                        return false;
+                    }
+                    if (errorMe.code == "auth/invalid-email") {
+                        showerror("l'email est invalid");
+                        return false;
+                    }
+                    if (errorMe.code == "auth/weak-password") {
+                        showerror("Le mot de passe doit comporter au moins 6 caractères");
+                        return false;
+                    }
+                    if (errorMe.code == "auth/missing-email") {
+                        showerror("l'email ne doit pas etre vide");
+                        return false;
+                    }
                 }
-                if (errorMe.code == "auth/invalid-email") {
-                    showerror("l'email est invalid");
-                    return false;
-                }
-                if (errorMe.code == "auth/weak-password") {
-                    showerror("Le mot de passe doit comporter au moins 6 caractères");
-                    return false;
-                }
-                if (errorMe.code == "auth/missing-email") {
-                    showerror("l'email ne doit pas etre vide");
-                    return false;
-                }
-                
-                
-               
-                
-            
-            }
-            createUserWithEmailAndPassword(auth, this.email.trim(), this.password)
-                .then((user) => {
-                console.log(user);
-                this.$router.replace("/connexion");
-            })
-                .catch((e) => {
-                console.log(e.code);
-                showerror(e);
-            });
-            /*  fin backend */
+                createUserWithEmailAndPassword(auth, this.email.trim(), this.password)
+                    .then((user) => {
+                        console.log(user);
+                    this.$router.replace("/connexion");
+                })
+                    .catch((e) => {
+                    console.log(e.code);
+                    showerror(e);
+                });
+
+            }  
         }
     },
+    created(){
+        const util=  localStorage.getItem('utilisateur')
+        console.log("oooooooo",util);
+        if(util == null){
+            this.$router.push('/connexion')
+        }else{
+            this.$router.push('/consulte')
+        }
+    }
+
 };
 </script>
 <style scoped>

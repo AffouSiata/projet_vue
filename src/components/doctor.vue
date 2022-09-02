@@ -66,6 +66,7 @@ export default {
     margin-top: 80px;
     width: 100%;
     height: 60vh;
+   
 }
 .slide h1{
         text-decoration: underline;

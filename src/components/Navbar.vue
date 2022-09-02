@@ -30,6 +30,7 @@ export default {
         top:0;
         box-shadow: rgb(44, 44, 43);
         font-family: 'Didot', serif;
+        z-index: 5;
     }
     .partie1-active{
         background-color: #b2e2f8;

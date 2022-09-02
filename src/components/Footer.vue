@@ -110,7 +110,7 @@ export default {
     name:"FooterComponnent"
 }
 </script>
-<style>
+<style scoped>
 footer{
     font-family: 'Didot', serif !important;
     color: black!important;

@@ -3,7 +3,7 @@
     <div class="inscrire">
         <form action="">
             <h2>Connexion</h2>
-             <p>Veuillez créer un <a href="/inscription">compte SVP</a></p> 
+             <p>Veuillez créer un <router-link to="/inscription">compte SVP</router-link></p> 
              <span class="erreur"></span>
            
              <div class="formes">
@@ -42,8 +42,6 @@ export default {
         
 
         async loginne(){
-
-
             function showerror(errorMe){
                     document.querySelector(".erreur").innerHTML = errorMe;
                     if (errorMe.code == "auth/user-not-found") {
@@ -59,13 +57,23 @@ export default {
             }
             signInWithEmailAndPassword(auth, this.email, this.password)
             .then((user)=>{
-                console.log(user);
+                console.log("AAAAAAAAAA",user.user.accessToken);
+                localStorage.setItem('utilisateur',user.user.accessToken)
                 this.$router.replace('/consulte');
             })
             .catch((e)=>{
                 console.log(e.code);
                 showerror(e)
             })
+        }
+    },
+    created(){
+        const util=  localStorage.getItem('utilisateur')
+        console.log("oooooooo",util);
+        if(util == null){
+            this.$router.push('/connexion')
+        }else{
+            this.$router.push('/consulte')
         }
     }
 
