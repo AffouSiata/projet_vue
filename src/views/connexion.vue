@@ -3,7 +3,8 @@
     <div class="inscrire">
         <form action="">
             <h2>Connexion</h2>
-             <p>Veuillez créer un <router-link to="/inscription">compte SVP</router-link></p> 
+             <!-- <p>Veuillez créer un <router-link to="/inscription">compte SVP</router-link></p>  -->
+             <p @click.prevent="redirecte">Veuillez créer un <span> compte</span></p>
              <span class="erreur"></span>
            
              <div class="formes">
@@ -40,7 +41,10 @@ export default {
     },
     methods:{
         
-
+        redirecte(){
+            console.log("azeertyuiopghg");
+            this.$router.replace('/inscription'); 
+        },
         async loginne(){
             function showerror(errorMe){
                     document.querySelector(".erreur").innerHTML = errorMe;
@@ -67,15 +71,15 @@ export default {
             })
         }
     },
-    created(){
-        const util=  localStorage.getItem('utilisateur')
-        console.log("oooooooo",util);
-        if(util == null){
-            this.$router.push('/connexion')
-        }else{
-            this.$router.push('/consulte')
-        }
-    }
+    // created(){
+    //     const util=  localStorage.getItem('utilisateur')
+    //     console.log("oooooooo",util);
+    //     if(util == null){
+    //         this.$router.push('/connexion')
+    //     }else{
+    //         this.$router.push('/consulte')
+    //     }
+    // }
 
 }
 </script>
@@ -155,5 +159,8 @@ export default {
     .erreur{
         color: red;
         font-weight: bold;
+    }
+    p span{
+        color: #3DA3D4;
     }
 </style>

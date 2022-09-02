@@ -109,11 +109,11 @@ export default {
     created(){
         const util=  localStorage.getItem('utilisateur')
         console.log("oooooooo",util);
-        if(util == null){
-            this.$router.push('/connexion')
-        }else{
+        if(util != null){
             this.$router.push('/consulte')
         }
+       
+        
     }
 
 };
